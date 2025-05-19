@@ -19,6 +19,76 @@
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+}
+
+.animate-spin {
+  animation: spin 20s linear infinite;
+}
+
+.shadow-glow-primary {
+  box-shadow: 0 0 15px rgba(247, 147, 26, 0.5);
+}
+
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Gradient transitions */
+.bg-gradient-transition {
+  transition: background-position 0.5s ease;
+  background-size: 200% 200%;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
